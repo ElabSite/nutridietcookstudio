@@ -142,14 +142,14 @@ body {
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
 .hero p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 300;
   color: #333;
 }
@@ -157,7 +157,7 @@ body {
 /* Bloc texte intro sous hero */
 .intro-section {
   background-color: #f2eadd;
-  padding: 3rem 0;
+  padding: 3.5rem 0;
   display: flex;
   justify-content: center;
 }
@@ -173,7 +173,7 @@ body {
 .intro-text strong {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: #000;
   display: block;
   margin-bottom: 1rem;
@@ -182,7 +182,7 @@ body {
 .intro-text .subtitle {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: 1rem 0;
 }
 
@@ -190,31 +190,31 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 0;
 }
 
 /* Bloc présentation Rym */
 .about-section-rym {
   background: #838a6b;
-  padding: 36px 0 36px 0;
+  padding: 50px 0 50px 0;
 }
 
 .about-container-rym {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
-  gap: 32px;
+  gap: 48px;
 }
 
 .about-image-rym {
   flex-shrink: 0;
-  width: 150px;
-  height: 150px;
+  width: 230px;
+  height: 230px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 16px;
   background: #b2b59c;
   display: flex;
   align-items: center;
@@ -226,14 +226,14 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 .about-content-rym {
   background: none;
   color: #fffbe6;
-  max-width: 520px;
-  padding: 6px 0;
+  max-width: 600px;
+  padding: 16px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -242,9 +242,9 @@ body {
 
 .about-content-rym h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.35rem;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   letter-spacing: 1px;
 }
 
@@ -253,16 +253,16 @@ body {
   font-weight: bold;
   font-style: italic;
   color: #fff;
-  margin-left: 7px;
-  font-size: 1.07em;
+  margin-left: 10px;
+  font-size: 1.17em;
 }
 
 .about-content-rym p {
-  font-size: 0.94rem;
+  font-size: 1.12rem;
   font-family: 'Open Sans', sans-serif;
   color: #fffbe6;
-  margin-bottom: 14px;
-  line-height: 1.52;
+  margin-bottom: 22px;
+  line-height: 1.65;
 }
 
 .about-content-rym strong {
@@ -277,12 +277,12 @@ body {
   color: #fff;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.89rem;
+  font-size: 1.07rem;
   letter-spacing: 1px;
-  padding: 8px 18px;
+  padding: 12px 28px;
   border-radius: 2px;
   transition: background 0.2s;
-  margin-top: 5px;
+  margin-top: 10px;
   text-align: center;
   font-weight: 600;
   width: fit-content;
@@ -296,17 +296,18 @@ body {
   .about-container-rym {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 22px;
     max-width: 97vw;
   }
   .about-image-rym {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 6px;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 8px;
   }
   .about-content-rym {
     padding: 0;
     text-align: center;
     align-items: center;
+    max-width: 96vw;
   }
 }
