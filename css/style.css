@@ -211,8 +211,8 @@ body {
 
 .about-image-rym {
   flex-shrink: 0;
-  width: 430px;
-  height: 430px;
+  width: 830px;
+  height: 830px;
   overflow: hidden;
   border-radius: 16px;
   background: #b2b59c;
