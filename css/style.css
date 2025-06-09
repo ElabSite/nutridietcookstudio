@@ -15,6 +15,10 @@ body {
   padding-top: 100px;
 }
 
+.highlight-b86a34 {
+  color: #b86a34 !important;
+}
+
 /* Navbar */
 .navbar {
   position: fixed;
@@ -139,7 +143,6 @@ body {
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  color: #9b2c2c;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -195,7 +198,6 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 1.3rem;
-  color: #9b2c2c;
   margin: 1rem 0;
 }
 
@@ -223,31 +225,34 @@ body {
   min-height: 420px;
 }
 
-.about-image {
+/* ARCH VOUTE STYLE */
+.about-image-arch {
   position: relative;
-  width: 38vw;
-  min-width: 420px;
-  max-width: 650px;
-  height: 420px;
-  overflow: hidden;
+  width: 460px;
+  min-width: 320px;
+  max-width: 520px;
+  height: 520px;
   background: #838a6b;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* Arche effet */
-  border-top-left-radius: 0;
-  border-top-right-radius: 300px 300px;
+  overflow: hidden;
+  /* voute arrondie avec border-radius sur le haut seulement */
+  border-top-left-radius: 260px 260px;
+  border-top-right-radius: 260px 260px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.about-image img {
+.about-image-arch img {
+  position: absolute;
+  left: 0; top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 0;
-  border-top-right-radius: 300px 300px;
+  border-top-left-radius: 260px 260px;
+  border-top-right-radius: 260px 260px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   background: #b2b59c;
@@ -334,7 +339,7 @@ body {
     flex-direction: column;
     min-height: unset;
   }
-  .about-image, .about-content {
+  .about-image-arch, .about-content {
     width: 100vw;
     min-width: unset;
     max-width: 100vw;
@@ -347,11 +352,12 @@ body {
     text-align: center;
     align-items: center;
   }
-  .about-image {
-    height: 350px;
+  .about-image-arch {
+    height: 320px;
     min-width: unset;
     max-width: 100vw;
-    border-top-right-radius: 200px 200px;
+    border-top-left-radius: 160px 160px;
+    border-top-right-radius: 160px 160px;
   }
   .hello-text {
     font-size: 2.3rem;
@@ -361,9 +367,10 @@ body {
 }
 
 @media (max-width: 700px) {
-  .about-image {
-    height: 230px;
-    border-top-right-radius: 90px 90px;
+  .about-image-arch {
+    height: 160px;
+    border-top-left-radius: 80px 80px;
+    border-top-right-radius: 80px 80px;
   }
   .hello-text {
     font-size: 1.3rem;
