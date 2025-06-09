@@ -154,21 +154,6 @@ body {
   color: #333;
 }
 
-/* Curseur clignotant */
-.cursor {
-  display: inline-block;
-  margin-left: 5px;
-  width: 8px;
-  animation: blink 1s step-start infinite;
-  color: #9b2c2c;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
 /* Bloc texte intro sous hero */
 .intro-section {
   background-color: #f2eadd;
@@ -209,59 +194,57 @@ body {
   margin-top: 0;
 }
 
-/* Bloc présentation Rita */
-.about-section {
+/* Mini About Bloc (Rym) */
+.about-section-mini {
   background: #838a6b;
-  padding: 40px 0 40px 0;
+  padding: 20px 0 14px 0;
 }
 
-.about-container {
+.about-container-mini {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 500px;
   margin: 0 auto;
-  gap: 0;
-  min-height: 280px;
+  gap: 12px;
 }
 
-.about-image-arch {
+.about-image-arch-mini {
   position: relative;
-  width: 260px;
-  min-width: 170px;
-  max-width: 300px;
-  height: 260px;
+  width: 65px;
+  height: 80px;
   background: #838a6b;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  border-top-left-radius: 140px 140px;
-  border-top-right-radius: 140px 140px;
+  border-top-left-radius: 33px 33px;
+  border-top-right-radius: 33px 33px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  flex-shrink: 0;
 }
 
-.about-image-arch img {
+.about-image-arch-mini img {
   position: absolute;
   left: 0; top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 140px 140px;
-  border-top-right-radius: 140px 140px;
+  border-top-left-radius: 33px 33px;
+  border-top-right-radius: 33px 33px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   background: #b2b59c;
 }
 
-.hello-text {
+.hello-text-mini {
   position: absolute;
-  top: 16px;
-  left: 18px;
+  top: 12px;
+  right: 8px;
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: 0.72rem;
   color: #2b341e;
   font-style: italic;
   font-weight: 400;
@@ -270,121 +253,82 @@ body {
   pointer-events: none;
 }
 
-.about-content {
+.about-content-mini {
   background: none;
   color: #fffbe6;
-  max-width: 520px;
-  padding: 22px 30px 22px 36px;
-  width: 56vw;
-  min-width: 180px;
+  max-width: 360px;
+  padding: 0 0 0 8px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.about-content h2 {
+.about-content-mini h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.25rem;
+  font-size: 0.78rem;
   font-weight: 300;
-  margin-bottom: 13px;
+  margin-bottom: 5px;
   letter-spacing: 1px;
 }
 
-.about-content .about-name {
+.about-name-mini {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   font-style: italic;
   color: #fff;
-  margin-left: 5px;
-  font-size: 1.15em;
+  margin-left: 6px;
+  font-size: 1.07em;
 }
 
-.about-content p {
-  font-size: 0.93rem;
+.about-content-mini p {
+  font-size: 0.74rem;
   font-family: 'Open Sans', sans-serif;
   color: #fffbe6;
-  margin-bottom: 18px;
-  line-height: 1.6;
+  margin-bottom: 8px;
+  line-height: 1.45;
 }
 
-.about-content strong {
+.about-content-mini strong {
   font-weight: bold;
   color: #fff;
   background: none;
 }
 
-.about-btn {
+.about-btn-mini {
   display: inline-block;
   background: #b86a34;
   color: #fff;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.96rem;
+  font-size: 0.7rem;
   letter-spacing: 1px;
-  padding: 9px 20px;
+  padding: 4px 10px;
   border-radius: 2px;
   transition: background 0.2s;
-  margin-top: 6px;
+  margin-top: 3px;
   text-align: center;
   font-weight: 600;
+  width: fit-content;
 }
 
-.about-btn:hover {
+.about-btn-mini:hover {
   background: #945328;
 }
 
-@media (max-width: 900px) {
-  .about-container {
+@media (max-width: 600px) {
+  .about-container-mini {
     flex-direction: column;
-    min-height: unset;
+    align-items: center;
+    gap: 7px;
+    max-width: 97vw;
   }
-  .about-image-arch, .about-content {
-    width: 100vw;
-    min-width: unset;
-    max-width: 100vw;
-    border-radius: 0;
-    padding-left: 0;
-    padding-right: 0;
+  .about-image-arch-mini {
+    margin-bottom: 7px;
   }
-  .about-content {
-    padding: 20px 13px 20px 13px;
+  .about-content-mini {
+    padding: 0;
     text-align: center;
     align-items: center;
-  }
-  .about-image-arch {
-    height: 140px;
-    min-width: unset;
-    max-width: 100vw;
-    border-top-left-radius: 70px 70px;
-    border-top-right-radius: 70px 70px;
-  }
-  .hello-text {
-    font-size: 1.05rem;
-    top: 8px;
-    left: 9px;
-  }
-}
-
-@media (max-width: 500px) {
-  .about-image-arch {
-    height: 90px;
-    width: 110px;
-    border-top-left-radius: 45px 45px;
-    border-top-right-radius: 45px 45px;
-  }
-  .hello-text {
-    font-size: 0.7rem;
-    top: 3px;
-    left: 7px;
-  }
-  .about-content h2 {
-    font-size: 0.93rem;
-  }
-  .about-content p {
-    font-size: 0.8rem;
-  }
-  .about-btn {
-    font-size: 0.8rem;
-    padding: 7px 12px;
   }
 }
