@@ -207,74 +207,83 @@ body {
   margin-top: 0;
 }
 
-/* Nouveau bloc About */
+/* Bloc présentation Rita */
 .about-section {
   background: #838a6b;
-  padding: 60px 0;
+  padding: 70px 0 70px 0;
 }
 
 .about-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1400px;
+  max-width: 1920px;
   margin: 0 auto;
-  gap: 60px;
-  flex-wrap: wrap;
+  gap: 0;
+  min-height: 420px;
 }
 
 .about-image {
   position: relative;
-  min-width: 350px;
-  max-width: 420px;
-  width: 100%;
-  aspect-ratio: 1/1.1;
-  border-radius: 50% 50% 0 0 / 54% 54% 46% 46%;
+  width: 38vw;
+  min-width: 420px;
+  max-width: 650px;
+  height: 420px;
   overflow: hidden;
-  background: #eceade;
+  background: #838a6b;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 220px 300px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .about-image img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50% 50% 0 0 / 54% 54% 46% 46%;
+  display: block;
+  border-top-left-radius: 0;
+  border-top-right-radius: 220px 300px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #b2b59c;
 }
 
 .hello-text {
   position: absolute;
-  top: 15px;
-  left: 25px;
+  top: 30px;
+  left: 35px;
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #22300b;
+  font-size: 3.3rem;
+  color: #2b341e;
   font-style: italic;
   font-weight: 400;
-  pointer-events: none;
+  letter-spacing: 1px;
   z-index: 2;
+  pointer-events: none;
 }
 
 .about-content {
+  background: none;
   color: #fffbe6;
-  max-width: 700px;
-  padding: 20px 0;
+  max-width: 950px;
+  padding: 40px 60px 40px 80px;
+  width: 62vw;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-content h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.about-content .about-intro {
-  font-style: italic;
-  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
 }
 
 .about-content .about-name {
@@ -282,13 +291,14 @@ body {
   font-weight: bold;
   font-style: italic;
   color: #fff;
+  margin-left: 8px;
 }
 
 .about-content p {
-  font-size: 1.2rem;
+  font-size: 1.21rem;
   font-family: 'Open Sans', sans-serif;
   color: #fffbe6;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   line-height: 1.7;
 }
 
@@ -310,64 +320,59 @@ body {
   border-radius: 2px;
   transition: background 0.2s;
   margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .about-btn:hover {
   background: #7e181c;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .about-container {
     flex-direction: column;
-    gap: 40px;
+    min-height: unset;
+  }
+  .about-image, .about-content {
+    width: 100vw;
+    min-width: unset;
+    max-width: 100vw;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-content {
+    padding: 35px 22px 30px 22px;
     text-align: center;
+    align-items: center;
   }
   .about-image {
-    margin: 0 auto 20px auto;
+    height: 350px;
+    min-width: unset;
+    max-width: 100vw;
+    border-top-right-radius: 160px 200px;
+  }
+  .hello-text {
+    font-size: 2.3rem;
+    top: 20px;
+    left: 24px;
   }
 }
 
-/* Responsive mobile */
-@media (max-width: 600px) {
-  body {
-    padding-top: 120px;
+@media (max-width: 700px) {
+  .about-image {
+    height: 230px;
+    border-top-right-radius: 90px 110px;
   }
-
-  .logo img {
-    height: 80px;
+  .hello-text {
+    font-size: 1.3rem;
+    top: 8px;
+    left: 10px;
   }
-
-  .nav-toggle-label {
-    display: flex;
+  .about-content h2 {
+    font-size: 1.4rem;
   }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-toggle:checked ~ .nav-links {
-    display: flex;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    background-color: #f2eadd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 1rem 1.5rem;
-    z-index: 9998;
-  }
-
-  .nav-links a,
-  .btn-contact {
-    width: 100%;
-    text-align: left;
-    font-size: 1.1rem;
-    padding: 0.75rem 0;
-  }
-
-  .btn-contact {
-    justify-content: flex-start;
+  .about-content p {
+    font-size: 1rem;
   }
 }
