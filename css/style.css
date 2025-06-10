@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display:wght@700&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Playfair+Display:wght@700;900italic&display=swap');
 
 /* Reset */
 * {
@@ -262,21 +262,17 @@ body {
 }
 
 .about-name-rym {
-  font-family: 'Lobster', cursive;
+  font-family: 'Playfair Display', serif;
   font-size: 2.7rem;
-  background: linear-gradient(90deg, #fffbe6 20%, #b86a34 80%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  color: #fff;
+  font-style: italic;
+  font-weight: 900;
   opacity: 0;
   animation: sweep-in-rym 2s 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
   white-space: nowrap;
   display: inline-block;
   position: relative;
   overflow: hidden;
-  font-style: normal;
-  font-weight: normal;
 }
 
 @keyframes sweep-in-rym {
