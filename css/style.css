@@ -239,14 +239,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  text-align: right;
 }
 
 .about-content-rym-inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
 }
 
 .about-content-rym h2 {
@@ -339,7 +339,6 @@ body {
   }
   .about-content-rym {
     padding: 0;
-    text-align: center;
     align-items: center;
     max-width: 96vw;
   }
