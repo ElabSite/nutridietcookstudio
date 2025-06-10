@@ -237,9 +237,16 @@ body {
   padding: 40px 0 40px 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
   text-align: right;
+}
+
+.about-content-rym-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .about-content-rym h2 {
@@ -335,6 +342,10 @@ body {
     text-align: center;
     align-items: center;
     max-width: 96vw;
+  }
+  .about-content-rym-inner {
+    align-items: center;
+    text-align: center;
   }
   .about-content-rym h2 {
     font-size: 1.08rem;
