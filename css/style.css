@@ -202,7 +202,7 @@ body {
 
 .about-container-rym {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* vertical centering */
   justify-content: flex-start;
   max-width: 1400px;
   margin: 0 auto;
@@ -238,7 +238,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center; /* center content vertically and horizontally */
+  height: 100%; /* ensure full height to center */
 }
 
 .about-content-rym-inner {
@@ -247,6 +248,9 @@ body {
   align-items: flex-start;
   text-align: left;
   width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .about-content-rym h2 {
@@ -256,6 +260,7 @@ body {
   margin-bottom: 20px;
   letter-spacing: 1px;
   text-align: left;
+  line-height: 1.1;
 }
 
 .about-name-rym {
@@ -265,23 +270,37 @@ body {
   color: #fff;
   margin-left: 12px;
   font-size: 2.2rem;
-  opacity: 0;
-  animation: fadeinrym 2.2s ease forwards;
   background: linear-gradient(90deg, #fffbe6 20%, #b86a34 80%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-          background-clip: text;
-          text-fill-color: transparent;
+  text-fill-color: transparent;
+  opacity: 0;
+  animation: sweep-in-rym 2s 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes fadeinrym {
-  from {
+@keyframes sweep-in-rym {
+  0% {
     opacity: 0;
-    transform: translateX(30px);
+    clip-path: inset(0 100% 0 0);
+    filter: blur(4px);
+    transform: translateX(40px);
   }
-  to {
+  40% {
     opacity: 1;
+    clip-path: inset(0 0 0 0);
+    filter: blur(0.5px);
     transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    filter: blur(0);
+    transform: none;
   }
 }
 
@@ -304,6 +323,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .about-btn-rym {
@@ -312,12 +332,11 @@ body {
   color: #fff;
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.18rem;
+  font-size: 0.95rem;
   letter-spacing: 1px;
-  padding: 14px 32px;
+  padding: 10px 24px;
   border-radius: 2px;
   transition: background 0.2s;
-  margin-top: 13px;
   text-align: center;
   font-weight: 600;
   width: fit-content;
@@ -340,6 +359,9 @@ body {
     padding: 12px 0;
     max-width: 96vw;
   }
+  .about-content-rym-inner {
+    max-width: 96vw;
+  }
   .about-content-rym h2 {
     font-size: 1.3rem;
   }
@@ -350,8 +372,8 @@ body {
     font-size: 0.90rem;
   }
   .about-btn-rym {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 0.89rem;
+    padding: 8px 16px;
   }
 }
 
@@ -374,6 +396,7 @@ body {
   .about-content-rym-inner {
     align-items: center;
     text-align: center;
+    max-width: 96vw;
   }
   .about-content-rym h2 {
     font-size: 1rem;
@@ -385,7 +408,7 @@ body {
     font-size: 0.82rem;
   }
   .about-btn-rym {
-    font-size: 0.89rem;
-    padding: 8px 14px;
+    font-size: 0.8rem;
+    padding: 7px 12px;
   }
 }
